@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<article class="markdown-body">
+  <section class="title">
+    <h2>{{ page.title }} </h2>
+  </section>
+  <section class="meta">
+  <span class="time">
+    <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+  </span>
+  {% if page.tags %}
+  <span class="tags">
+    {% for tag in page.tags %}
+    <a href="/tags.html#{{ tag }}" title="{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+  </span>
+  {% endif %}
+  </section>
+  <section class="post">
+  {{ content }}
+  </section>
+  {% if page.guid %}
+  <div class="divider">
+    <span>
+    {% if page.previous %}
+    <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i></a>
+    {% else %}
+    <i class="fa fa-circle"></i>
+    {% endif %}
+    </span>
+    {% if site.duoshuo %}
+	    {% if page.guid %}
+        <span class="commenticon"  id="leave_comment_link"><a href="javascript:leave_comment();"><i class="fa fa-comment-o"></i></a></span>
+        <span class="commenticon"   id="collapse_comment_link" style="display:none;"><a href="javascript:collapse_comment();"><i class="fa fa-chevron-up"></i></a></span>
+        {% endif %}	
+    {% endif %}
+    <span>
+    {% if page.next %}
+    <a href="{{ page.next.url }}"><i class="fa fa-chevron-right"></i></a>
+    {% else %}
+    <i class="fa fa-circle"></i>
+    {% endif %}
+    </span>
+  </div>
+  <section class="comment">
+{% if site.duoshuo %}
+	{% if page.guid %}
+	<div class="ds-thread" id="ds-commnet" style="display:none;" data-thread-key="{{ page.guid }}" data-url="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" />
+	<script type="text/javascript">
+		var lcbtn = document.getElementById('leave_comment_link');
+		var ccbtn = document.getElementById('collapse_comment_link');
+		var commnet = document.getElementById('ds-commnet');
+	    function leave_comment(){
+            lcbtn.style.display = "none"; 
+            ccbtn.style.display = "";
+            commnet.style.display = ""; 
+		}
+	    function collapse_comment(){
+            lcbtn.style.display = ""; 
+            ccbtn.style.display = "none";
+            commnet.style.display = "none"; 
+		}
+	var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+    {% endif %}	
+{% endif %}
+  </section>
+
+  {% endif %}
+</article>

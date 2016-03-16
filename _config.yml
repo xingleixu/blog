@@ -1,0 +1,27 @@
+markdown: kramdown
+#highlighter: pygments
+permalink: /:title.html
+name: "Kinfy"
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
+
+author: "xingleixu"
+atom-baseurl: "http://blog.kinfy.com"
+duoshuo: "xingleixu"
+
+navigations:
+
+  - title: 文章
+    href: /
+  - title: 标签
+    href: /tags
+  - title: 关于我
+    href: /about
+

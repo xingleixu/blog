@@ -1,0 +1,9 @@
+<div id="header-nav">
+    <h1><a title="{{ site.name }}" class="" href="/">{{ site.name }}</a></h1>
+    <ul>
+    {% for nav in site.navigations %}
+       <li><a title="{{ nav.title }}" href="{{ nav.href }}" {% if page.url == nav.href %}class="active"{% endif %}>{{ nav.title }}</a></li>
+    {% endfor %}
+    <li><a title="rss feed" href="/atom.xml" class="fa fa-rss"></a></li>
+    </ul>
+</div>

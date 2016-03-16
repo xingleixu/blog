@@ -1,0 +1,1 @@
+kinfy's private blog。
