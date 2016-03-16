@@ -107,7 +107,9 @@ h2{
 	color:#ccc;
 	 margin-right:10px;
 }
-.article-list li{ padding:2px 0;
+.article-list li{
+	list-style: none;
+	padding:2px 0;
 }
 .meta .time,.meta .tags a{ color:#999;}
 /*tag*/
