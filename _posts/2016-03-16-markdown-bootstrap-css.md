@@ -1,5 +1,5 @@
 ---
-title: markdown 标签 bootstrap 样式
+title: markdown标签
 layout: post
 guid: urn:uuid:83015b80-cb3c-0133-e7c9-63916fd8f332
 tags:
@@ -12,6 +12,7 @@ tags:
 </p>
 </div>
 
+效果
 
 - 无序列表
 	- 列表1
