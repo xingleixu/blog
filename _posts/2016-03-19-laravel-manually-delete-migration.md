@@ -1,5 +1,5 @@
 ---
-title: laravel手动删除migration文件
+title: Laravel手动删除migration文件
 layout: post
 guid: urn:uuid:f491f6d0-cfeb-0133-e7cd-63916fd8f332
 tags:
