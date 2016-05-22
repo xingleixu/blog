@@ -12,12 +12,15 @@ tags:
 
 #### 保存临时文件
 
+
 ````
 $temp_file = tempnam(sys_get_temp_dir(), 'Tux');  
 file_put_contents($temp_file , $source); 
 ```
 
+
 #### 判断
+
 
 ```
 $finfo = finfo_open(FILEINFO_MIME_TYPE);  
