@@ -10,14 +10,14 @@ tags:
 一直没找到合适的方法，看了stackoverflow的答案才恍然大悟。
 其实都一样，关键是文件先接收过来，然后再判断就是了。
 
-####保存临时文件
+#### 保存临时文件
 
 ````
 $temp_file = tempnam(sys_get_temp_dir(), 'Tux');  
 file_put_contents($temp_file , $source); 
 ```
 
-####判断
+#### 判断
 
 ```
 $finfo = finfo_open(FILEINFO_MIME_TYPE);  
